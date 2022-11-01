@@ -25,10 +25,12 @@ function showOverlay(e){
     if(popup.classList.contains("show")){
         popup.classList.remove("show");
         body.classList.remove("noscroll");
+        searchBtn.classList.remove("transform-search");
     }
     if(searchField.classList.contains("show")){
         searchField.classList.remove("show");
         body.classList.remove("noscroll");
+        searchBtn.classList.remove("transform-search");
     }
     if(hamburger.classList.contains("active")){
         hamburger.classList.remove("active");
@@ -100,6 +102,7 @@ function showPopUp(e){
     if(searchField.classList.contains("show")){
         searchField.classList.remove("show");
         body.classList.remove("noscroll");
+        searchBtn.classList.remove("transform-search");
     }
     hamburger.classList.toggle("active");
     popup.classList.toggle("show");
@@ -126,5 +129,6 @@ function showSearchBar(e){
         hamburger.classList.remove("active");
     }
     searchField.classList.toggle("show");
-    body.classList.toggle("noscroll");
+    searchBtn.classList.toggle("transform-search");
+    body.classList.toggle("noscroll"); 
 }
