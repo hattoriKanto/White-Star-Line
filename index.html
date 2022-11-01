@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Alata:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Arizonia:regular" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="popup">
+            <div class="popup__content"></div>
+        </div>
+        <div id="overlay" class="overlay">
+            <div id="overlay-bg" class="overlay__bg"></div>
+            <div class="modal">
+                <div class="modal-header">
+                    <div id="close" class="close-btn"></div>
+                    <h2 class="title">Sign In</h2>
+                </div>
+                <div class="modal-main">
+                    <form class="form" action="#">
+                        <label class="modal-label" for="email">Your e-mail</label>
+                        <input class="modal-input" required type="email" name="email" id="email" placeholder="Your e-mail">
+                        <label class="modal-label" for="login">Your login</label>
+                        <input class="modal-input" required type="text" name="login" id="login" placeholder="Your login">
+                        <label class="modal-label" for="password">Your password</label>
+                        <input class="modal-input" required type="password" name="password" id="password" placeholder="Your password">
+                        <label class="modal-label" for="repeat-password">Repeat your password</label>
+                        <input class="modal-input" required type="password" name="repeat-password" id="repeat-password" placeholder="Repeat your password">
+                        <button class="form__btn button_orange">Sign In</button>
+                    </form>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+        <div class="search-field">
+            <form class="search-form" action="#">
+                <input class="search-input" placeholder="Search to information here" type="text">
+                <button class="search-button">
+                    <img class="search-img" src="./img/search-field/search.svg" alt="search button">
+                </button>
+            </form>
+        </div>
+        <header class="header">
+            <div class="header__top flex container container_header">
+                <a href="#" class="logo"><img src="./img/header/logo.svg" alt="logo"></a>
+                <nav class="menu">
+                    <ul class="list">
+                        <li class="item"><a href="#" class="link">Find a cruise</a></li>
+                        <li class="item"><a href="#" class="link">Deals</a></li>
+                        <li class="item"><a href="#" class="link">Ships</a></li>
+                        <li class="item"><a href="#" class="link">Destinations</a></li>
+                        <li class="item"><a href="#" class="link">Manage My Cruise</a></li>
+                    </ul>
+                </nav>
+                <div class="buttons">
+                    <button id="sign-in" class="sign-in">Sign In</button>
+                    <button id="search" class="search"><img src="./img/header/Search.svg" alt="search"></button>
+                    <div class="hamburger">
+                        <span class="hamburger__top span"></span>
+                        <span class="hamburger__middle span"></span>
+                        <span class="hamburger__bottom span"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="header__bottom">
+            <div class="flex container">
+                <div class="text">We stand with Ukraine!</div>
+                <div class="tel">United States<a href="tel:+8185555555">818 555 55 55</a></div>
+            </div>
+        </section>
+        <main class="main">
+            <div class="container flex">
+                <div class="text">                
+                    <h1 class="title">Luxury Transatlantic Journey</h1>
+                    <div class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, explicabo nostrum magnam quidem suscipit similique earum excepturi libero nulla maiores laudantium nobis! Voluptatibus a officia cum repellat debitis at amet.</div>
+                    <button class="button_orange">Book Now</button>
+                </div>
+            </div>
+        </main>
+        <section class="cruise">
+            <div class="container">
+                <form class="form flex flex-cruise-form" action="#">
+                    <div class="from flex flex-column">
+                        <label class="label" for="from">Departing from</label>
+                        <select class="select" name="Departing from" id="from">
+                            <option class="option" value="0">Choose Departure Port</option>
+                            <option class="option" value="1">Barcelona, Spain</option>
+                            <option class="option" value="2">Liverpool, UK</option>
+                            <option class="option" value="3">Miami, USA</option>
+                            <option class="option" value="4">Naples, Italy</option>
+                            <option class="option" value="5">Singapore, Singapore</option>
+                        </select>
+                    </div>
+                    <div class="dest flex flex-column">
+                        <label class="label" for="Destination">Cruising to</label>
+                        <select class="select" name="Cruising to" id="Destination">
+                            <option class="option" value="0">Choose Destination</option>
+                            <option class="option" value="1">Barcelona, Spain</option>
+                            <option class="option" value="2">Liverpool, UK</option>
+                            <option class="option" value="3">Miami, USA</option>
+                            <option class="option" value="4">Naples, Italy</option>
+                            <option class="option" value="5">Singapore, Singapore</option>
+                        </select>
+                    </div>
+                    <div class="date flex flex-column">
+                        <label class="label" for="date">Choose Your Date</label>
+                        <input class="input" type="date" name="Choose Your Date" id="date">
+                    </div>
+                    <button class="button_orange button-cruise">Search Cruise</button>
+                </form>
+                <h2 class="subtitle subtitle-cruise">Popular Cruises</h2>
+                <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat saepe facilis itaque ullam quisquam quae quasi expedita, inventore rem quia voluptatibus suscipit omnis esse dolore vel nesciunt eaque sint dignissimos?</div>
+                <div class="cruise__wrapper flex flex-cruise-items">
+                    <div class="cruise__item">
+                        <img class="img" src="./img/cruise/img-1.jpg" alt="01">
+                        <div class="text flex flex-column">
+                            <h3 class="title">5 Days Italian Cruise</h3>
+                            <div class="item price flex"><span class="span">Starting from</span>$399/person</div>
+                            <div class="item from flex"><span class="span">Departing from</span>Barcelona, Spain</div>
+                            <div class="item flex"><span class="span">Ship</span>Blue Heart Line</div>
+                            <a class="view" href="#">View 10 dates<img src="./img/cruise/arrow.svg" alt="view-more"></a>
+                        </div>
+                    </div>
+                    <div class="cruise__item">
+                        <img class="img" src="./img/cruise/img-2.jpg" alt="01">
+                        <div class="text flex flex-column">
+                            <h3 class="title">14 Days Luxury Transatlantic Journey</h3>
+                            <div class="item price flex"><span class="span">Starting from</span>$1599/person</div>
+                            <div class="item from flex"><span class="span">Departing from</span>Liverpool, UK</div>
+                            <div class="item flex"><span class="span">Ship</span>RMS Titanic</div>
+                            <a class="view" href="#">View 10 dates<img src="./img/cruise/arrow.svg" alt="view-more"></a>
+                        </div>
+                    </div>
+                    <div class="cruise__item">
+                        <img class="img" src="./img/cruise/img-3.jpg" alt="01">
+                        <div class="text flex flex-column">
+                            <h3 class="title">7 Days New Brazil Cruise</h3>
+                            <div class="item price flex"><span class="span">Starting from</span>$899/person</div>
+                            <div class="item from flex"><span class="span">Departing from</span>Miami, Florida</div>
+                            <div class="item flex"><span class="span">Ship</span>Golden Rose</div>
+                            <a class="view" href="#">View 10 dates<img src="./img/cruise/arrow.svg" alt="view-more"></a>
+                        </div>
+                    </div>
+                    <div class="cruise__item">
+                        <img class="img" src="./img/cruise/img-4.jpg" alt="01">
+                        <div class="text flex flex-column">
+                            <h3 class="title">30 Days World Singapore Cruise 2023</h3>
+                            <div class="item price flex"><span class="span">Starting from</span>$3999/person</div>
+                            <div class="item from flex"><span class="span">Departing from</span>Miami, Florida</div>
+                            <div class="item flex"><span class="span">Ship</span>Britannic</div>
+                            <a class="view" href="#">View 10 dates<img src="./img/cruise/arrow.svg" alt="view-more"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="overview">
+            <div class="container flex">
+                <div class="text">
+                    <img class="logo" src="./img/header/logo.svg" alt="logo">
+                    <h2 class="subtitle subtitle-overview">RMS TITANIC</h2>
+                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus laborum cupiditate vero earum ad minus inventore quae quidem fugiat aliquid beatae voluptatibus, libero labore, debitis molestias expedita nesciunt perspiciatis et!<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aut voluptates veritatis provident enim facere facilis, itaque, veniam nam corrupti omnis et laborum deleniti inventore quos repellendus ex voluptate delectus?</div>
+                    <button class="button_orange">FIND CRUISES</button>
+                </div>
+                <div class="img">
+                    <img src="./img/overview/img-1.jpg" alt="RMS Titanic">
+                </div>
+            </div>
+        </section>
+        <section class="destination">
+            <div class="container">
+                <h2 class="subtitle">OUR DESTINATIONS</h2>
+                <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis ut, ipsum nihil unde quae repellendus aperiam illum veniam eligendi? Itaque possimus eum quisquam quam quia pariatur tempore modi nihil impedit!</div>
+                <div class="flex">
+                    <div class="item">
+                        <img src="./img/destination/img-1.jpg" alt="Italy">
+                        <h3 class="title">Italy</h3>
+                        <button class="button_orange">Book Now</button>
+                    </div>
+                    <div class="item">
+                        <img src="./img/destination/img-2.jpg" alt="Brazil">
+                        <h3 class="title">Brazil</h3>
+                        <button class="button_orange">Book Now</button>
+                    </div>
+                    <div class="item-ship item-ship-1">
+                        <img src="./img/destination/img-3.jpg" alt="Britannic">
+                        <h3 class="title">Britannic</h3>
+                    </div>
+                    <div class="item-ship item-ship-2">
+                        <img src="./img/destination/img-4.jpg" alt="Titanic">
+                        <h3 class="title">Titanic</h3>
+                    </div>
+                    <div class="item">
+                        <img src="./img/destination/img-5.jpg" alt="Singapore">
+                        <h3 class="title">Singapore</h3>
+                        <button class="button_orange">Book Now</button>
+                    </div>
+                    <div class="item">
+                        <img src="./img/destination/img-6.jpg" alt="USA">
+                        <h3 class="title">USA</h3>
+                        <button class="button_orange">Book Now</button>
+                    </div>
+                    <div class="carousel">
+                        <div class="carousel__wrap">
+                            <div id="slider-btn-next" class="slider-button slider-button-next">
+                                <div class="rounder">
+                                    <img class="rounder__img" src="./img/destination/slider-chevron.svg" alt="slide right">
+                                </div>
+                            </div>
+                            <div id="slider-btn-prev" class="slider-button slider-button-prev">
+                                <div class="rounder">
+                                    <img class="rounder__img" src="./img/destination/slider-chevron.svg" alt="slide right">
+                                </div>
+                            </div>
+                            <div class="carousel__slider"> 
+                                <div class="carousel-item carousel-item-1">
+                                    <img class="slider__img titanic-img" src="./img/destination/slider-img-1.png" alt="titanic">
+                                    <div class="text">
+                                        <h3 class="title">RMS TITANIC</h3>
+                                        <h4 class="subtitle">Luxury transatlantic journey</h4>
+                                        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut luctus dolor, in pretium nunc. Sed eleifend justo eu purus interdum, a venenatis tortor fermentum. </div>
+                                        <button class="button_orange">BOOK NOW</button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item carousel-item-2">
+                                    <img class="slider__img britannic-img" src="./img/destination/slider-img-1.png" alt="britannic">
+                                    <div class="text">
+                                        <h3 class="title">RMS Britannic</h3>
+                                        <h4 class="subtitle">Luxury transatlantic journey</h4>
+                                        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut luctus dolor, in pretium nunc. Sed eleifend justo eu purus interdum, a venenatis tortor fermentum. </div>
+                                        <button class="button_orange">BOOK NOW</button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item carousel-item-3">
+                                    <img class="slider__img golden-rose-img" src="./img/destination/slider-img-1.png" alt="Golden Rose">
+                                    <div class="text">
+                                        <h3 class="title">Golden Rose</h3>
+                                        <h4 class="subtitle">Luxury transatlantic journey</h4>
+                                        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut luctus dolor, in pretium nunc. Sed eleifend justo eu purus interdum, a venenatis tortor fermentum. </div>
+                                        <button class="button_orange">BOOK NOW</button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item carousel-item-4">
+                                    <img class="slider__img blue-heart-line-img" src="./img/destination/slider-img-1.png" alt="Blue Heart Line">
+                                    <div class="text">
+                                        <h3 class="title">Blue Heart Line</h3>
+                                        <h4 class="subtitle">Luxury transatlantic journey</h4>
+                                        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut luctus dolor, in pretium nunc. Sed eleifend justo eu purus interdum, a venenatis tortor fermentum. </div>
+                                        <button class="button_orange">BOOK NOW</button>
+                                    </div>
+                                </div>
+                                <div class="carousel-item carousel-item-5">
+                                    <img class="slider__img olympic-img" src="./img/destination/slider-img-1.png" alt="olympic">
+                                    <div class="text">
+                                        <h3 class="title">RMS Olympic</h3>
+                                        <h4 class="subtitle">Luxury transatlantic journey</h4>
+                                        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut luctus dolor, in pretium nunc. Sed eleifend justo eu purus interdum, a venenatis tortor fermentum. </div>
+                                        <button class="button_orange">BOOK NOW</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item bigger-item">
+                        <img src="./img/destination/img-7.png" alt="Britannic">
+                        <h3 class="title">Britannic</h3>
+                        <div class="bigger-item__bottom flex flex-column">
+                            <div class="desc">Lorem ipsum dolor</div>
+                            <button class="button_orange">Read More</button>
+                        </div>
+                    </div>
+                    <div class="item bigger-item">
+                        <img src="./img/destination/img-9.png" alt="Golden Rose">
+                        <h3 class="title">Golden Rose</h3>
+                        <div class="bigger-item__bottom flex flex-column">
+                            <div class="desc">Lorem ipsum dolor</div>
+                            <button class="button_orange">Read More</button>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+        <section class="awards">
+            <div class="container flex flex-column">
+                <div class="text">
+                    <h2 class="subtitle">AWARD-WINNING SHIPS</h2>
+                    <div class="desc-1">Lorem ipsum dolor sit amet</div>
+                    <div class="desc-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, accusamus quae consequuntur officiis deleniti earum cumque esse tenetur neque, odio id blanditiis suscipit repellendus. Aliquid repellendus nisi harum voluptatum maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quas accusantium maxime reprehenderit expedita architecto ratione quia! Dolores, maxime asperiores. Tempore quae sequi ex vero nulla nemo iure inventore repellendus!maxime?Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br> 
+                    Fuga illo deserunt fugiat natus, sapiente sit, assumenda laudantium molestiae quas in voluptates quisquam temporibus doloremque eius adipisci magnam maiores pariatur culpa? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, inventore incidunt molestias nulla dicta, est ratione accusamus esse minima temporibus labore exercitationem fugiat, consequuntur ab praesentium mollitia illo qui provident.</div>
+                </div>
+                <div class="choose">
+                    <ul class="list">
+                        <li class="item"><a href="#" class="link">RMS TITANIC<img class="img" src="./img/awards/slider-chevron.svg" alt="arrow"></a></li>
+                        <li class="item"><a href="#" class="link">BRITANNIC<img class="img" src="./img/awards/slider-chevron.svg" alt="arrow"></a></li>
+                        <li class="item"><a href="#" class="link">GOLDEN ROSE<img class="img" src="./img/awards/slider-chevron.svg" alt="arrow"></a></li>
+                        <li class="item"><a href="#" class="link">BLUE HEART<img class="img" src="./img/awards/slider-chevron.svg" alt="arrow"></a></li>
+                        <li class="item"><a href="#" class="link">RMS OLYMPIC<img class="img" src="./img/awards/slider-chevron.svg" alt="arrow"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container flex">
+                <ul class="list">
+                    <li class="item"><a href="#" class="link">CONTACT US</a></li>
+                    <li class="item"><a href="#" class="link">ABOUT US</a></li>
+                    <li class="item"><a href="#" class="link">PRIVACY</a></li>
+                    <li class="item"><a href="#" class="link">Terms of use</a></li>
+                    <li class="item"><a href="#" class="link">careers</a></li>
+                    <li class="item"><a href="#" class="link">safety&Security</a></li>
+                    <li class="item"><a href="#" class="link">bill of rights</a></li>
+                    <li class="item"><a href="#" class="link">press room</a></li>
+                </ul>
+                <ul class="list">
+                    <li class="item"><a href="#" class="link">GUEST INFORMATION</a></li>
+                    <li class="item"><a href="#" class="link">PAYMENT</a></li>
+                    <li class="item"><a href="#" class="link">REDEEM CRUISE CREDIT</a></li>
+                    <li class="item"><a href="#" class="link">CRUISE PLANNER</a></li>
+                    <li class="item"><a href="#" class="link">BOOK a flight/hotel</a></li>
+                    <li class="item"><a href="#" class="link">transportation</a></li>
+                    <li class="item"><a href="#" class="link">port shopping</a></li>
+                    <li class="item"><a href="#" class="link">rms gift cards</a></li>
+                </ul>
+                <ul class="list">
+                    <li class="item"><a href="#" class="link">LAST MINUTE CRUises</a></li>
+                    <li class="item"><a href="#" class="link">weekend cruises</a></li>
+                    <li class="item"><a href="#" class="link">black friday</a></li>
+                    <li class="item"><a href="#" class="link">holiday cruises</a></li>
+                    <li class="item"><a href="#" class="link">luxury cruises</a></li>
+                    <li class="item"><a href="#" class="link">family vacations</a></li>
+                    <li class="item"><a href="#" class="link">luxury weddings</a></li>
+                    <li class="item"><a href="#" class="link">THEMED cruises</a></li>
+                </ul>
+                <ul class="list">
+                    <li class="item"><a href="#" class="link">group travel</a></li>
+                    <li class="item"><a href="#" class="link">accessibility onboard</a></li>
+                    <li class="item"><a href="#" class="link">cruise tips/tricks</a></li>
+                    <li class="item"><a href="#" class="link">view brochures</a></li>
+                    <li class="item"><a href="#" class="link">meetings&charters</a></li>
+                    <li class="item"><a href="#" class="link">certified vacation planner</a></li>
+                    <li class="item"><a href="#" class="link">locate a travel advisor</a></li>
+                    <li class="item"><a href="#" class="link">White star line blog</a></li>
+                </ul>
+            </div>
+        </footer>
+        <section class="footer__bottom">
+            <div class="container flex">
+                <img src="./img/footer/logo.svg" class="logo"></img>
+                <div class="text">© 2022 White Star Line</div>
+                <div class="social">
+                    <a href="#" class="link"><img src="./img/footer/twitter.svg" alt="twitter link" class="img"></a>
+                    <a href="#" class="link"><img src="./img/footer/facebook.svg" alt="facebook link" class="img"></a>
+                    <a href="#" class="link"><img src="./img/footer/Instagram.svg" alt="instagram link" class="img"></a>
+                    <a href="#" class="link"><img src="./img/footer/YouTube.svg" alt="youtube link" class="img"></a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

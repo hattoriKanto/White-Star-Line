@@ -1,0 +1,78 @@
+@media screen and ( max-width: 1120px )
+    .header
+        &__top
+            .logo
+                img
+                    width: 95%
+            .list
+                gap: 25px
+            .link
+                font-size: 14px
+            .buttons
+                gap: 25px
+                .sign-in
+                    font-size: 14px
+@media screen and ( max-width: 992px )
+    .header
+        &__top
+            .logo
+                flex: 0 0 25%
+                img
+                    width: 80%
+            .list
+                gap: 18px
+            .link
+                font-size: 12px
+            .buttons
+                gap: 0px
+                .sign-in
+                    font-size: 12px
+@media screen and ( max-width: 768px )
+    .header
+        &__top
+            .logo
+                flex: none
+                img
+                    width: 80%
+            .menu
+                display: none
+            .buttons
+                gap: 20px
+                .sign-in
+                    display: none
+            .hamburger
+                display: block
+                background: transparent
+                transform: rotateY(180deg)
+                .span
+                    display: block
+                    margin: 6px 0 0 0
+                    height: 2px
+                    background: #fff
+                    transition: 0.3s all
+                    &:first-child
+                        margin: 0 0 0 0
+                &__top
+                    width: 20px
+                &__middle
+                    width: 25px
+                &__bottom
+                    width: 30px
+            .active
+                .span
+                    margin: 0 0 0 0
+                .hamburger__top
+                    width: 30px
+                    transform: translateY(2.5px) rotateZ(45deg)
+                .hamburger__middle
+                    opacity: 0
+                .hamburger__bottom
+                    transform: translateY(-1.5px) rotateZ(-45deg)
+        &__bottom
+            font-size: 12px
+@media screen and ( max-width: 400px )
+    .header
+        .logo
+            width: 60%
+        &__bottom
+            font-size: 10px

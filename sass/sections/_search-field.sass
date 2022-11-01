@@ -1,0 +1,35 @@
+.search-field
+    position: fixed
+    display: flex
+    justify-content: flex-start
+    padding: 120px 15px 15px 15px
+    top: -1000%
+    left: 0
+    width: 100%
+    height: 100%
+    background: $main-text-color
+    z-index: 3
+    transition: 0.3s all
+    .search-form
+        display: flex
+        width: 100%
+        height: 100%
+        .search-input
+            width: 100%
+            height: 40px
+            border-radius: 10px
+            margin: 0 10px 0 0
+            padding: 12px 10px
+            outline: none
+        .search-button
+            min-width: 40px
+            max-height: 40px
+            background: #000
+            border-radius: 100%
+            transition: 0.3s all
+            &:hover, &:active
+                transform: scale(1.1)
+            .search-img
+                width: 20px
+.show
+    top: 0

@@ -1,0 +1,61 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: $header-top-background
+    z-index: 101
+    &__top
+        .logo
+            display: flex
+            img
+                width: 100%
+        .menu
+            display: contents
+        .list
+            display: flex
+            align-items: center
+            gap: 30px
+        .link
+            display: block
+            text-transform: uppercase
+            transition: 0.3s all
+            &:hover, &:active
+                transform: scale(1.1)
+        .buttons
+            display: flex
+            align-items: center
+            gap: 30px
+            .sign-in
+                padding: 12px
+                font-size: 16px
+                background: transparent
+                text-transform: uppercase
+                color: #FFFFFF
+                transition: 0.3s all
+                &:hover, &:active
+                    transform: scale(1.1)
+            .search
+                padding: 12px
+                background: transparent
+                transition: 0.3s all
+                &:hover, &:active
+                    transform: scale(1.1)
+                    transform: rotate(180deg)
+        .hamburger
+            display: none
+    &__bottom
+        position: fixed
+        top: 74px
+        left: 0
+        width: 100%
+        background: $header-bottom-background
+        font-size: 14px
+        color: #fff
+        z-index: 100
+        .text
+            text-transform: uppercase
+        .tel
+            display: flex
+            text-transform: uppercase
+            gap: 10px
