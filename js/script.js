@@ -1,20 +1,16 @@
 "use strict";
     const menuChild = document.querySelector(".menu").cloneNode(1),
     signInChild = document.querySelector("#sign-in").cloneNode(1),
-    closeBtn = document.querySelector("#close"),
     searchBtn = document.querySelector("#search"),
     searchField = document.querySelector(".search-field"),
     popup = document.querySelector(".popup"),
     popupContent = document.querySelector(".popup__content"),
     hamburger = document.querySelector(".hamburger"),
     overlay = document.querySelector("#overlay"),
-    overlayBg = document.querySelector("#overlay-bg"),
     body = document.querySelector("body");
 
 hamburger.addEventListener("click", showPopUp);
 searchBtn.addEventListener("click", showSearchBar);
-closeBtn.addEventListener("click", hideOverlay);
-overlayBg.addEventListener("click", hideOverlay);
 signInChild.addEventListener("click", showOverlay);
 
 function showOverlay(e){
@@ -47,13 +43,11 @@ function hideOverlay(e){
 const sliderBtnNext = document.querySelector("#slider-btn-next"),
     sliderBtnNPrev = document.querySelector("#slider-btn-prev"),
     slider = document.querySelector(".carousel__slider"),
-    sliderItem = document.querySelectorAll(".carousel-item"),
-    siderI = document.querySelector(".carousel-item");
+    sliderItem = document.querySelectorAll(".carousel-item");
 let counter = 0;
     
     sliderBtnNext.addEventListener('click', nextSlide);
     sliderBtnNPrev.addEventListener('click', prevSlide);
-    console.log(counter);
 
     if(counter == 0){
         sliderBtnNPrev.classList.add("hide");
@@ -84,7 +78,6 @@ let counter = 0;
         counter--;
         //slider.style.transform = 'translate(' + `${-stepSize * counter}px)`;
         slider.style.transform = 'translate(' + (-100 * counter) + '%)';
-        console.log(counter);
         if(counter <= 0){
             sliderBtnNPrev.classList.add("hide");
             sliderBtnNext.classList.remove("hide");
