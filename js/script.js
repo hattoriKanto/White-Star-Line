@@ -2,7 +2,6 @@
     const menuChild = document.querySelector(".menu").cloneNode(1),
     signInChild = document.querySelector("#sign-in").cloneNode(1),
     closeBtn = document.querySelector("#close"),
-    signIn = document.querySelector("#sign-in"),
     searchBtn = document.querySelector("#search"),
     searchField = document.querySelector(".search-field"),
     popup = document.querySelector(".popup"),
@@ -14,7 +13,6 @@
 
 hamburger.addEventListener("click", showPopUp);
 searchBtn.addEventListener("click", showSearchBar);
-signIn.addEventListener("click", showOverlay);
 closeBtn.addEventListener("click", hideOverlay);
 overlayBg.addEventListener("click", hideOverlay);
 signInChild.addEventListener("click", showOverlay);

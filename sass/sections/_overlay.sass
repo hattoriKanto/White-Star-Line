@@ -1,87 +1,110 @@
 .overlay
     position: fixed
-    top: 0
-    left: -1000%
+    padding: 15px
+    display: flex
+    align-items: flex-start
+    justify-content: center
     width: 100%
     height: 100%
-    z-index: 103
-    transition: 0.3s all
-    &__bg
-        width: 100%
-        height: 100%
-        background: rgba(0, 0, 0, .5)
+    overflow: auto
+    background: url(../img/modal/bg.jpg)
     .modal
-        position: absolute
         display: flex
         flex-direction: column
         justify-content: flex-start
-        top: 15%
-        left: 50%
-        transform: translateX(-50%)
-        padding: 30px
-        width: 500px
-        height: 480px
-        border-radius: 10%
+        gap: 10px
+        padding: 40px
+        width: 680px
+        height: 570px
         background: #fff
-        overflow: auto
         .modal-header
-            position: relative
-            padding: 10px 15px 10px 15px
-            border-bottom: 2px solid #323238
-            .close-btn
-                position: absolute
-                padding: 12px
-                top: 0
-                right: 0
-                background: transparent
-                transition: 0.3s all
-                cursor: pointer
-                &::after, &::before
-                    content: ''
-                    display: block
-                    position: absolute
-                    top: 10px
-                    left: 0
-                    width: 20px
-                    height: 2px   
-                    background: #000
-                    transform: rotate(45deg)
-                &::before
-                    transform: rotate(-45deg)
-                &:hover, &:active
-                    transform: scale(1.1)
+            .title
+                text-align: center
+                font-size: 36px
+            .text
+                text-align: center
+                font-size: 18px
+                margin: 0 0 10px 0
+                color: #bbb
+            .links
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 20px
+                .link
+                    width: 200px
+                    padding: 10px
+                    border-radius: 5px
+                    font-size: 18px
+                    text-align: center
+                    color: #fff
+                .link-img
+                    width: 30px
+                    margin: 0 7px 0 0 
+                    transition: .3s all
+                .link-facebook
+                    background: #3e00aa
+                    &:hover, &:active
+                        background: #713ccb
+                .link-google
+                    background: #d24d00
+                    &:hover, &:active
+                        background: #d97942
+        .divider
+            display: flex
+            align-items: center
+            gap: 10px
+            &__line
+                border: 2px solid #bbb
+                color: #bbb
+                overflow: visible
+                width: 100%
+                height: 5px
+            &__text
+                color: #bbb
+                text-transform: uppercase
+                font-size: 18px
         .modal-main
-            margin: 20px 0 0 0 
+            margin: 10px 0 0 0 
             display: flex
             flex-direction: column
             align-items: center
             .form
-                display: flex
-                flex-direction: column
-                align-items: center
-                justify-content: center
                 width: 100%
                 &__btn
-                    margin: 10px 0 0 0
+                    width: 100%
+                    border-radius: 5px
+                    display: block
+                    margin: 10px auto 0 auto
+                    &:hover
+                        transform: none
             .modal-input
                 display: flex
                 padding: 12px 18px 12px 18px
+                margin: 0 0 10px 0
                 width: 100%
                 height: 40px
                 font-size: 14px
                 font-weight: 400
                 line-height: 1.17
-                border-radius: 10px
+                border: 1px solid #b8b4b4
+                border-radius: 5px
                 outline: none
-                background: #e0e0e0
                 color: #000
                 &::placeholder
                     color: #000
+            .modal-checkbox
+                margin: 0 0 10px 0
         .modal-footer
             display: flex
             align-items: center
             justify-content: center
             margin: 20px 0 0 0
-            border-top: 2px solid #323238
-.show
-    left: 0
+            &__text
+                margin: 0 10px 0 0
+            .sign-up
+                padding: 10px
+                color: #5e46e3
+                transition: 0.3s all
+                &:hover
+                    color: #8573dd
