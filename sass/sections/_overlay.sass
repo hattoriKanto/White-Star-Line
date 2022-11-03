@@ -1,110 +1,126 @@
 .overlay
     position: fixed
-    padding: 15px
-    display: flex
-    align-items: flex-start
-    justify-content: center
     width: 100%
     height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     overflow: auto
-    background: url(../img/modal/bg.jpg)
+    background: url(../img/modal/bg.jpg) center center/cover no-repeat
     .modal
-        display: flex
-        flex-direction: column
-        justify-content: flex-start
-        gap: 10px
-        padding: 40px
+        display: block
+        margin: 8% auto auto
+        padding: 30px
         width: 680px
-        height: 570px
+        border-radius: 5px
         background: #fff
-        .modal-header
-            .title
-                text-align: center
-                font-size: 36px
-            .text
-                text-align: center
-                font-size: 18px
-                margin: 0 0 10px 0
-                color: #bbb
-            .links
-                display: flex
-                justify-content: center
-                align-items: center
-                gap: 20px
-                .link
-                    width: 200px
-                    padding: 10px
-                    border-radius: 5px
-                    font-size: 18px
-                    text-align: center
-                    color: #fff
-                .link-img
-                    width: 30px
-                    margin: 0 7px 0 0 
-                    transition: .3s all
-                .link-facebook
-                    background: #3e00aa
-                    &:hover, &:active
-                        background: #713ccb
-                .link-google
-                    background: #d24d00
-                    &:hover, &:active
-                        background: #d97942
-        .divider
-            display: flex
-            align-items: center
-            gap: 10px
-            &__line
-                border: 2px solid #bbb
-                color: #bbb
-                overflow: visible
-                width: 100%
-                height: 5px
-            &__text
-                color: #bbb
-                text-transform: uppercase
-                font-size: 18px
-        .modal-main
-            margin: 10px 0 0 0 
+        .modal-content
             display: flex
             flex-direction: column
-            align-items: center
-            .form
-                width: 100%
-                &__btn
-                    width: 100%
-                    border-radius: 5px
-                    display: block
-                    margin: 10px auto 0 auto
-                    &:hover
-                        transform: none
-            .modal-input
+            justify-content: flex-start
+            gap: 10px
+            .modal-header
                 display: flex
-                padding: 12px 18px 12px 18px
-                margin: 0 0 10px 0
-                width: 100%
-                height: 40px
-                font-size: 14px
-                font-weight: 400
-                line-height: 1.17
-                border: 1px solid #b8b4b4
-                border-radius: 5px
-                outline: none
-                color: #000
-                &::placeholder
-                    color: #000
-            .modal-checkbox
-                margin: 0 0 10px 0
-        .modal-footer
-            display: flex
-            align-items: center
-            justify-content: center
-            margin: 20px 0 0 0
-            &__text
-                margin: 0 10px 0 0
-            .sign-up
-                padding: 10px
-                color: #5e46e3
-                transition: 0.3s all
-                &:hover
-                    color: #8573dd
+                flex-direction: column
+                align-items: center
+                .title
+                    text-align: center
+                    font-size: 36px
+            .modal-main
+                display: flex
+                flex-direction: column
+                align-items: center
+                .form
+                    width: 100%
+                    &__btn
+                        width: 100%
+                        border-radius: 5px
+                        display: block
+                        margin: 10px auto 0 auto
+                        &:hover
+                            transform: none
+                    .modal-input
+                        display: flex
+                        padding: 12px 18px 12px 18px
+                        margin: 0 0 10px 0
+                        width: 100%
+                        height: 40px
+                        font-size: 14px
+                        font-weight: 400
+                        line-height: 1.17
+                        border: 1px solid #b8b4b4
+                        border-radius: 5px
+                        outline: none
+                        color: #000
+                    .checkbox__recover
+                        margin: 0 0 10px 0
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        .checkbox
+                            display: flex
+                            align-items: center
+                            .modal-checkbox
+                                margin: 0 5px 0 0
+                        .modal-recover 
+                            padding: 10px
+                            color: #5e46e3
+                            transition: 0.3s all
+                            &:hover
+                                color: #8573dd     
+            .modal-footer
+                display: flex
+                align-items: center
+                justify-content: center
+                margin: 20px 0 0 0
+                .sign-up
+                    padding: 10px
+                    color: #5e46e3
+                    transition: 0.3s all
+                    &:hover
+                        color: #8573dd
+.overlay-sec
+    background: none
+    .modal-sec
+        margin: 0 auto
+        padding: 20px
+        width: 100%
+        height: 100%
+        border-radius: 0
+        .modal-content-sec
+            gap: 30px
+            .modal-header-sec
+                .title-sec
+                    margin: 0 0 10px 0
+                .text
+                    text-align: center
+                    color: #7f7f91
+                    &__link
+                        color: #5e46e3
+                        transition: 0.3s all
+                        &:hover
+                            color: #8573dd   
+            .modal-main-sec
+                .desc
+                    margin: 0 0 20px 0
+                    font-size: 20px
+                .form-sec
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    width: 100%
+                    .form__btn-sec
+                        width: 40%
+                        margin: 20px auto 0 auto
+                    .modal-input
+                        margin: 0 0 20px 0
+                        width: 70%
+                        height: 40px
+                        font-size: 14px
+                        font-weight: 400
+                        line-height: 1.17
+                        border: 1px solid #b8b4b4
+                        border-radius: 5px
+                        outline: none
+                        color: #000

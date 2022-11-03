@@ -8,41 +8,39 @@
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One:regular" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Arizonia:regular" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.min.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="../img/favicon.png">
     <title>White Star Line</title>
 </head>
 <body>
-    <div id="overlay" class="overlay">
+    <div class="overlay">
         <div class="modal">
-            <div class="modal-header">
-                <h2 class="title">Sign in now</h2>
-                <div class="text">Sign in using social media to get quick access</div>
-                <div class="links">
-                    <a class="link link-google" href=""><img class="link-img" src="../img/modal/google.svg" alt="Authorization with Google">Google</a>
-                    <a class="link link-facebook" href=""><img class="link-img" src="../img/modal/facebook.svg" alt="Authorization with Facebook">Facebook</a>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="logo" href="../index.html"><img src="../img/forms/logo.png" alt="logo"></a>
+                    <h2 class="title">Sign in now</h2>
                 </div>
-            </div>
-            <div class="divider">
-                <hr class="divider__line">
-                <div class="divider__text">or</div>
-                <hr class="divider__line">
-            </div>
-            <div class="modal-main">
-                <form class="form" action="">
-                    <label class="modal-label" for="username">Username</label>
-                    <input class="modal-input" id="username" required type="text">
-                    <label class="modal-label" for="password">Password</label>
-                    <input class="modal-input" id="password" required type="password">
-                    <input class="modal-checkbox" id="checkbox" type="checkbox">
-                    <label class="modal-label" for="checkbox">Remember me</label>
-                    <button class="form__btn button_orange">Sign In</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <p class="modal-footer__text">Have not an account yet?</p>
-                <a id="sign-up" class="sign-up" href="">Sign up</a>
+                <div class="modal-main">
+                    <form class="form" action="">
+                        <label class="modal-label" for="username">Username or e-mail adress</label>
+                        <input class="modal-input" id="username" required type="text">
+                        <label class="modal-label" for="password">Password</label>
+                        <input class="modal-input" id="password" required type="password">
+                        <div class="checkbox__recover">
+                            <div class="checkbox">
+                                <input class="modal-checkbox" id="checkbox" type="checkbox">
+                                <label class="modal-label" for="checkbox">Remember me</label>
+                            </div>
+                            <a class="modal-recover" href="./recover-password.html">Forgot a password?</a>
+                        </div>
+                        <button class="form__btn button_orange">Sign In</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p class="modal-footer__text">Have not an account yet?</p>
+                    <a id="sign-up" class="sign-up" href="./sign-up.html">Sign up</a>
+                </div>
             </div>
         </div>
     </div>
-    <script src="./js/script.js"></script>
 </body>
 </html>

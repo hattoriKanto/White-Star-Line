@@ -11,26 +11,6 @@
 
 hamburger.addEventListener("click", showPopUp);
 searchBtn.addEventListener("click", showSearchBar);
-signInChild.addEventListener("click", showOverlay);
-
-function showOverlay(e){
-    e.preventDefault();
-    overlay.classList.add("show");
-    if(popup.classList.contains("show")){
-        popup.classList.remove("show");
-        body.classList.remove("noscroll");
-        searchBtn.classList.remove("transform-search");
-    }
-    if(searchField.classList.contains("show")){
-        searchField.classList.remove("show");
-        body.classList.remove("noscroll");
-        searchBtn.classList.remove("transform-search");
-    }
-    if(hamburger.classList.contains("active")){
-        hamburger.classList.remove("active");
-    }
-    body.classList.add("noscroll");
-}
 
 function hideOverlay(e){
     e.preventDefault();
