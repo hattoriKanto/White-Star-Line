@@ -65,7 +65,6 @@ let counter = 0;
             sliderBtnNext.classList.remove("hide");
         }
     }
-
 // FUNCTIONS
 
 function showPopUp(e){

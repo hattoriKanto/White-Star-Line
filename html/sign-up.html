@@ -12,5 +12,53 @@
     <title>White Star Line</title>
 </head>
 <body>
+    <div class="overlay overlay-sec">
+        <div class="modal modal-sec">
+            <div class="modal-content modal-content-sec">
+                <div class="modal-header modal-header-sec">
+                    <a class="logo" href="../index.html"><img src="../img/forms/logo.png" alt="logo"></a>
+                    <h2 class="title title-sec">Let's get started</h2>
+                    <div class="text">Please enter the information below to exactly match your valid government-issued ID.</div>
+                </div>
+                <div class="modal-main modal-main-sec">
+                    <form class="form form-sec" action="#">
+                        <div class="modal-item">
+                            <label class="modal-label" for="first-name">First name</label>
+                            <input class="modal-input modal-input-sec" id="first-name" required type="text">
+                            <p class="modal-message">This field is required</p>
+                        </div>
+                        <div class="modal-item">
+                            <label class="modal-label" for="second-name">Second name</label>
+                            <input class="modal-input modal-input-sec" id="second-name" required type="text">
+                            <p class="modal-message">This field is required</p>
+                        </div>
+                        <div class="modal-item">
+                            <label class="modal-label" for="e-mail">E-mail adress</label>
+                            <input class="modal-input modal-input-sec" id="e-mail" required type="text">
+                            <p class="modal-message">This field is required</p>
+                        </div>
+                        <div class="modal-item">
+                            <label class="modal-label" for="password">Create new password</label>
+                            <input class="modal-input modal-input-sec" id="password" required type="password">
+                            <p class="modal-message">This field is required</p>
+                        </div>
+                        <div class="checkbox flex checkbox-sec">
+                            <input class="modal-checkbox" id="special" type="checkbox">
+                            <label class="modal-label" for="special">I would like to receive special offers, travel tips, and insider information by email.</label>
+                        </div>
+                        <p class="modal-message message-sec">To create an account, you must agree to the following terms:</p>
+                        <div class="checkbox flex checkbox-sec">
+                            <input class="modal-checkbox" id="privacy" type="checkbox" required>
+                            <label class="modal-label" for="privacy">I have read and agree to the Terms of Use and Privacy Policy.</label>
+                        </div>
+                        <button class="form__btn form__btn-sec button_orange">Done</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="sign-in" href="./sign-in.html">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

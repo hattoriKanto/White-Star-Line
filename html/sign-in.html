@@ -13,18 +13,26 @@
 </head>
 <body>
     <div class="overlay">
-        <div class="modal">
+        <div id="modal-sign-in" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
                     <a class="logo" href="../index.html"><img src="../img/forms/logo.png" alt="logo"></a>
                     <h2 class="title">Sign in now</h2>
                 </div>
                 <div class="modal-main">
-                    <form class="form" action="">
-                        <label class="modal-label" for="username">Username or e-mail adress</label>
-                        <input class="modal-input" id="username" required type="text">
-                        <label class="modal-label" for="password">Password</label>
-                        <input class="modal-input" id="password" required type="password">
+                    <form class="form" action="#">
+                        <div class="modal-item">
+                            <label class="modal-label" for="username">Username or e-mail adress</label>
+                            <div class="modal-field">
+                                <input class="modal-input" id="username" required type="text">
+                            </div>
+                        </div>
+                        <div class="modal-item">
+                            <label class="modal-label" for="password">Password</label>
+                            <div class="modal-field">
+                                <input class="modal-input" id="password" required type="password">
+                            </div>
+                        </div>
                         <div class="checkbox__recover">
                             <div class="checkbox">
                                 <input class="modal-checkbox" id="checkbox" type="checkbox">
@@ -32,7 +40,7 @@
                             </div>
                             <a class="modal-recover" href="./recover-password.html">Forgot a password?</a>
                         </div>
-                        <button class="form__btn button_orange">Sign In</button>
+                        <button id="sign-in-btn" class="form__btn button_orange">Sign In</button>
                     </form>
                 </div>
                 <div class="modal-footer">
