@@ -1,15 +1,32 @@
 @media screen and ( max-width: 768px )
-    .overlay
+    .overlay, .overlay-sec
         padding: 0
         overflow: none
-        .modal
+        .modal, .modal-sec
             margin: 0
             top: 0
             width: 100%
             height: 100%
             border-radius: 0
             overflow: auto
+            .modal-content-sec 
+                .modal-main-sec 
+                    .form-sec 
+                        .modal-item 
+                            .modal-input-sec
+                                width: 100%
+                        .form__btn-sec
+                            width: 50%
 @media screen and ( max-width: 576px )
-    .overlay
-        .modal 
-            padding: 15px
+    .overlay, .overlay-sec
+        .modal, .modal-sec
+            .modal-content, .modal-content-sec
+                padding: 15px
+                .modal-main-sec 
+                    .form-sec 
+                        .form__btn-sec
+                            width: 100%
+                .modal-main 
+                    .form 
+                        .checkbox__recover
+                            flex-direction: column
