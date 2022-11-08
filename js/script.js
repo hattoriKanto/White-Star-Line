@@ -102,3 +102,30 @@ function showSearchBar(e){
     searchBtn.classList.toggle("transform-search");
     body.classList.toggle("noscroll"); 
 }
+
+//CRUISE FORM
+
+const choiceDeparture = document.querySelector("#choice-departure"),
+    choiceDestination = document.querySelector("#choice-destination"),
+    arrowDeparture = document.querySelector("#arrow-departure"),
+    arrowDestination = document.querySelector("#arrow-destination"),
+    chooseDeparture = document.querySelector("#choose-departure"),
+    chooseDestination = document.querySelector("#choose-destination");
+
+chooseDeparture.addEventListener('click', () => {
+    choiceDeparture.classList.toggle("show-option");
+    arrowDeparture.classList.toggle("open");
+    if(choiceDestination.classList.contains("show-option") || arrowDestination.classList.contains("open")){
+        choiceDestination.classList.remove("show-option");
+        arrowDestination.classList.remove("open");
+    }
+})
+
+chooseDestination.addEventListener('click', () => {
+    choiceDestination.classList.toggle("show-option");
+    arrowDestination.classList.toggle("open");
+    if(choiceDeparture.classList.contains("show-option") || arrowDeparture.classList.contains("open")){
+        choiceDeparture.classList.remove("show-option");
+        arrowDeparture.classList.remove("open");
+    }
+})

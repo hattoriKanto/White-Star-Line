@@ -65,33 +65,60 @@
         <section class="cruise">
             <div class="container">
                 <form class="form flex flex-cruise-form" action="#">
-                    <div class="from flex flex-column">
-                        <label class="label" for="from">Departing from</label>
-                        <select class="select" name="Departing from" id="from">
-                            <option class="option" value="0">Choose Departure Port</option>
-                            <option class="option" value="1">Barcelona, Spain</option>
-                            <option class="option" value="2">Liverpool, UK</option>
-                            <option class="option" value="3">Miami, USA</option>
-                            <option class="option" value="4">Naples, Italy</option>
-                            <option class="option" value="5">Singapore, Singapore</option>
-                        </select>
+                    <div class="form__item">
+                        <h3 class="form__title">Departing from</h3>
+                        <div id="choose-departure" class="form__choose">Choose Departure Port<img id="arrow-departure" class="form__img" src="./img/cruise/arrow.svg" alt="arrow"></div>
+                        <div id="choice-departure" class="form__choice">
+                            <div class="form__option option">
+                                <input class="option__input" type="radio" name="first" id="first">
+                                <label for="first">Barcelona, Spain</label>
+                            </div>
+                            <div class="form__option option">
+                                <input class="option__input" type="radio" name="second" id="second">
+                                <label for="second">Liverpool, UK</label>
+                            </div>
+                            <div class="form__option option">
+                                <input class="option__input" type="radio" name="third" id="third">
+                                <label for="third">Miami, USA</label>
+                            </div>
+                            <div class="form__option option">
+                                <input class="option__input" type="radio" name="fourth" id="fourth">
+                                <label for="fourth">Naples, Italy</label>
+                            </div>
+                            <div class="form__option option">
+                                <input class="option__input" type="radio" name="fifth" id="fifth">
+                                <label for="fifth">Singapore, Singapore</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="dest flex flex-column">
-                        <label class="label" for="Destination">Cruising to</label>
-                        <select class="select" name="Cruising to" id="Destination">
-                            <option class="option" value="0">Choose Destination</option>
-                            <option class="option" value="1">Barcelona, Spain</option>
-                            <option class="option" value="2">Liverpool, UK</option>
-                            <option class="option" value="3">Miami, USA</option>
-                            <option class="option" value="4">Naples, Italy</option>
-                            <option class="option" value="5">Singapore, Singapore</option>
-                        </select>
-                    </div>
-                    <div class="date flex flex-column">
-                        <label class="label" for="date">Choose Your Date</label>
-                        <input class="input" type="date" name="Choose Your Date" id="date">
+                    <div class="form__item">
+                        <h3 class="form__title">Cruising to</h3>
+                        <div id="choose-destination" class="form__choose">Choose Destination<img id="arrow-destination" class="form__img" src="./img/cruise/arrow.svg" alt="arrow"></div>
+                        <div id="choice-destination" class="form__choice">
+                            <div class="form__option option">
+                                <input class="option__input" type="radio" name="first" id="first">
+                                <label for="first">Barcelona, Spain</label>
+                            </div>
+                            <div class="form__option option">
+                                <input class="option__input" type="radio" name="second" id="second">
+                                <label for="second">Liverpool, UK</label>
+                            </div>
+                            <div class="form__option option">
+                                <input class="option__input" type="radio" name="third" id="third">
+                                <label for="third">Miami, USA</label>
+                            </div>
+                            <div class="form__option option">
+                                <input class="option__input" type="radio" name="fourth" id="fourth">
+                                <label for="fourth">Naples, Italy</label>
+                            </div>
+                            <div class="form__option option">
+                                <input class="option__input" type="radio" name="fifth" id="fifth">
+                                <label for="fifth">Singapore, Singapore</label>
+                            </div>
+                        </div>
                     </div>
                     <button class="button_orange button-cruise">Search Cruise</button>
+                </form>
                 </form>
                 <h2 class="subtitle subtitle-cruise">Popular Cruises</h2>
                 <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat saepe facilis itaque ullam quisquam quae quasi expedita, inventore rem quia voluptatibus suscipit omnis esse dolore vel nesciunt eaque sint dignissimos?</div>
