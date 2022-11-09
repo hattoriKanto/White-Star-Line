@@ -4,10 +4,14 @@ const choice = document.querySelector(".form__choice"),
     choose = document.querySelector(".form__choose");
 
 choose.addEventListener('click', showChoiceSection);
-option.addEventListener('click', selectOption);
 
 function showChoiceSection(e){
     e.preventDefault(e);
     choice.classList.toggle("show");
     img.classList.toggle("open");
 }
+
+const container = document.querySelector(".container");
+const formItem = document.querySelector(".form__item");
+
+console.log(formItem.closest('.form__title'));

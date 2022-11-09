@@ -107,25 +107,61 @@ function showSearchBar(e){
 
 const choiceDeparture = document.querySelector("#choice-departure"),
     choiceDestination = document.querySelector("#choice-destination"),
-    arrowDeparture = document.querySelector("#arrow-departure"),
-    arrowDestination = document.querySelector("#arrow-destination"),
     chooseDeparture = document.querySelector("#choose-departure"),
-    chooseDestination = document.querySelector("#choose-destination");
+    chooseDestination = document.querySelector("#choose-destination"),
+    chooseDate = document.querySelector("#choose-date"),
+    choiceDate = document.querySelector("#choice-date"),
+    optionDate = document.querySelectorAll(".date__option"),
+    optionDeparture = document.querySelectorAll(".option__departure"),
+    optionDestination = document.querySelectorAll(".option__destination");
 
 chooseDeparture.addEventListener('click', () => {
     choiceDeparture.classList.toggle("show-option");
-    arrowDeparture.classList.toggle("open");
-    if(choiceDestination.classList.contains("show-option") || arrowDestination.classList.contains("open")){
+    chooseDeparture.classList.toggle("open");
+    if((choiceDestination.classList.contains("show-option") || chooseDestination.classList.contains("open")) || (choiceDate.classList.contains("show-option") || chooseDate.classList.contains("open"))){
         choiceDestination.classList.remove("show-option");
-        arrowDestination.classList.remove("open");
+        chooseDestination.classList.remove("open");
+        choiceDate.classList.remove("show-option");
+        chooseDate.classList.remove("open");
     }
 })
 
 chooseDestination.addEventListener('click', () => {
     choiceDestination.classList.toggle("show-option");
-    arrowDestination.classList.toggle("open");
-    if(choiceDeparture.classList.contains("show-option") || arrowDeparture.classList.contains("open")){
+    chooseDestination.classList.toggle("open");
+    if((choiceDeparture.classList.contains("show-option") || chooseDeparture.classList.contains("open")) || (choiceDate.classList.contains("show-option") || chooseDate.classList.contains("open"))){
         choiceDeparture.classList.remove("show-option");
-        arrowDeparture.classList.remove("open");
+        chooseDeparture.classList.remove("open");
+        choiceDate.classList.remove("show-option");
+        chooseDate.classList.remove("open");
     }
+})
+
+chooseDate.addEventListener('click', () => {
+    choiceDate.classList.toggle("show-option");
+    chooseDate.classList.toggle("open");
+    if((choiceDeparture.classList.contains("show-option") || chooseDeparture.classList.contains("open")) || (choiceDestination.classList.contains("show-option") || chooseDestination.classList.contains("open")) ){
+        choiceDeparture.classList.remove("show-option");
+        chooseDeparture.classList.remove("open");
+        choiceDestination.classList.remove("show-option");
+        chooseDestination.classList.remove("open");
+    }
+})
+
+optionDestination.forEach(elem =>{
+    elem.addEventListener('click', () =>{
+        chooseDestination.innerHTML = elem.querySelector(".option__label-destination").innerHTML;
+        choiceDestination.classList.remove("show-option");
+        chooseDestination.classList.remove("open");
+    })
+})
+
+optionDate.forEach(elem =>{
+    elem.addEventListener('click', () =>{
+        const dateColumn = elem.closest(".date__column");
+        const dateTitle = dateColumn.querySelector(".date__title");
+        chooseDate.innerHTML = elem.querySelector(".option__label-date").innerHTML + ' ' +  dateTitle.innerHTML;
+        choiceDate.classList.remove("show-option");
+        chooseDate.classList.remove("open");
+    })
 })

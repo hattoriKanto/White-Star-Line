@@ -66,54 +66,219 @@
             <div class="container">
                 <form class="form flex flex-cruise-form" action="#">
                     <div class="form__item">
-                        <h3 class="form__title">Departing from</h3>
-                        <div id="choose-departure" class="form__choose">Choose Departure Port<img id="arrow-departure" class="form__img" src="./img/cruise/arrow.svg" alt="arrow"></div>
+                        <h3 class="form__title">DEPARTING FROM</h3>
+                        <div id="choose-departure" class="form__choose">Choose Departure Port</div>
                         <div id="choice-departure" class="form__choice">
-                            <div class="form__option option">
+                            <div class="form__option option option__departure">
                                 <input class="option__input" type="radio" name="first" id="first">
-                                <label for="first">Barcelona, Spain</label>
+                                <label class="option__label option__label-departure" for="first">Barcelona, Spain</label>
                             </div>
-                            <div class="form__option option">
+                            <div class="form__option option option__departure">
                                 <input class="option__input" type="radio" name="second" id="second">
-                                <label for="second">Liverpool, UK</label>
+                                <label class="option__label option__label-departure" for="second">Liverpool, UK</label>
                             </div>
-                            <div class="form__option option">
+                            <div class="form__option option option__departure">
                                 <input class="option__input" type="radio" name="third" id="third">
-                                <label for="third">Miami, USA</label>
+                                <label class="option__label option__label-departure" for="third">Miami, USA</label>
                             </div>
-                            <div class="form__option option">
+                            <div class="form__option option option__departure">
                                 <input class="option__input" type="radio" name="fourth" id="fourth">
-                                <label for="fourth">Naples, Italy</label>
+                                <label class="option__label option__label-departure" for="fourth">Naples, Italy</label>
                             </div>
-                            <div class="form__option option">
+                            <div class="form__option option option__departure">
                                 <input class="option__input" type="radio" name="fifth" id="fifth">
-                                <label for="fifth">Singapore, Singapore</label>
+                                <label class="option__label option__label-departure" for="fifth">Singapore, Singapore</label>
                             </div>
                         </div>
                     </div>
                     <div class="form__item">
                         <h3 class="form__title">Cruising to</h3>
-                        <div id="choose-destination" class="form__choose">Choose Destination<img id="arrow-destination" class="form__img" src="./img/cruise/arrow.svg" alt="arrow"></div>
+                        <div id="choose-destination" class="form__choose">Choose Destination</div>
                         <div id="choice-destination" class="form__choice">
-                            <div class="form__option option">
+                            <div class="form__option option option__destination">
                                 <input class="option__input" type="radio" name="first" id="first">
-                                <label for="first">Barcelona, Spain</label>
+                                <label class="option__label option__label-destination" for="first">Barcelona, Spain</label>
                             </div>
-                            <div class="form__option option">
+                            <div class="form__option option option__destination">
                                 <input class="option__input" type="radio" name="second" id="second">
-                                <label for="second">Liverpool, UK</label>
+                                <label class="option__label option__label-destination" for="second">Liverpool, UK</label>
                             </div>
-                            <div class="form__option option">
+                            <div class="form__option option option__destination">
                                 <input class="option__input" type="radio" name="third" id="third">
-                                <label for="third">Miami, USA</label>
+                                <label class="option__label option__label-destination" for="third">Miami, USA</label>
                             </div>
-                            <div class="form__option option">
+                            <div class="form__option option option__destination">
                                 <input class="option__input" type="radio" name="fourth" id="fourth">
-                                <label for="fourth">Naples, Italy</label>
+                                <label class="option__label option__label-destination" for="fourth">Naples, Italy</label>
                             </div>
-                            <div class="form__option option">
+                            <div class="form__option option option__destination">
                                 <input class="option__input" type="radio" name="fifth" id="fifth">
-                                <label for="fifth">Singapore, Singapore</label>
+                                <label class="option__label option__label-destination" for="fifth">Singapore, Singapore</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <h3 class="form__title">Leaving</h3>
+                        <div id="choose-date" class="form__choose">Choose Your Date</div>
+                        <div id="choice-date" class="form__choice form__date date">
+                            <div class="date__column">
+                                <h3 class="date__title">2022</h3>
+                                <div class="date__months">
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Jan</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Feb</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Mar</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Apr</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">May</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Jun</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Jul</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Aug</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Sep</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Oct</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Nov</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Dec</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="date__column">
+                                <h3 class="date__title">2023</h3>
+                                <div class="date__months">
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Jan</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Feb</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Mar</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Apr</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">May</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Jun</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Jul</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Aug</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Sep</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Oct</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Nov</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Dec</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="date__column">
+                                <h3 class="date__title">2024</h3>
+                                <div class="date__months">
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Jan</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Feb</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Mar</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Apr</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">May</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Jun</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Jul</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Aug</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Sep</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Oct</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Nov</label>
+                                    </div>
+                                    <div class="form__option date__option option">
+                                        <input class="option__input" type="radio" name="first" id="first">
+                                        <label class="option__label option__label-date" for="first">Dec</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
