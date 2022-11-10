@@ -156,6 +156,14 @@ optionDestination.forEach(elem =>{
     })
 })
 
+optionDeparture.forEach(elem =>{
+    elem.addEventListener('click', () =>{
+        chooseDeparture.innerHTML = elem.querySelector(".option__label-departure").innerHTML;
+        choiceDeparture.classList.remove("show-option");
+        chooseDeparture.classList.remove("open");
+    })
+})
+
 optionDate.forEach(elem =>{
     elem.addEventListener('click', () =>{
         const dateColumn = elem.closest(".date__column");
