@@ -40,7 +40,7 @@
             margin: 0 0 8px 0
             color: $secondary-item-text-color
             text-transform: uppercase
-        &__choice
+        .choice
             position: absolute
             display: none
             flex-direction: column
@@ -67,12 +67,14 @@
                 color: #656565
         .date
             display: none
-            flex-direction: row
             position: absolute
             left: 0
             padding: 20px
             gap: 60px
             width: 100%
+            &__content
+                display: flex
+                flex-direction: row
             &__column
                 flex: 33.333%
             &__months

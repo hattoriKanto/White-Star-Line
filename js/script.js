@@ -100,7 +100,7 @@ function showSearchBar(e){
     }
     searchField.classList.toggle("show");
     searchBtn.classList.toggle("transform-search");
-    body.classList.toggle("noscroll"); 
+    body.classList.toggle("noscroll-default"); 
 }
 
 //CRUISE FORM
@@ -118,6 +118,7 @@ const choiceDeparture = document.querySelector("#choice-departure"),
 chooseDeparture.addEventListener('click', () => {
     choiceDeparture.classList.toggle("show-option");
     chooseDeparture.classList.toggle("open");
+    body.classList.toggle("noscroll");
     if((choiceDestination.classList.contains("show-option") || chooseDestination.classList.contains("open")) || (choiceDate.classList.contains("show-option") || chooseDate.classList.contains("open"))){
         choiceDestination.classList.remove("show-option");
         chooseDestination.classList.remove("open");
@@ -129,6 +130,7 @@ chooseDeparture.addEventListener('click', () => {
 chooseDestination.addEventListener('click', () => {
     choiceDestination.classList.toggle("show-option");
     chooseDestination.classList.toggle("open");
+    body.classList.toggle("noscroll");
     if((choiceDeparture.classList.contains("show-option") || chooseDeparture.classList.contains("open")) || (choiceDate.classList.contains("show-option") || chooseDate.classList.contains("open"))){
         choiceDeparture.classList.remove("show-option");
         chooseDeparture.classList.remove("open");
@@ -140,6 +142,7 @@ chooseDestination.addEventListener('click', () => {
 chooseDate.addEventListener('click', () => {
     choiceDate.classList.toggle("show-option");
     chooseDate.classList.toggle("open");
+    body.classList.toggle("noscroll");
     if((choiceDeparture.classList.contains("show-option") || chooseDeparture.classList.contains("open")) || (choiceDestination.classList.contains("show-option") || chooseDestination.classList.contains("open")) ){
         choiceDeparture.classList.remove("show-option");
         chooseDeparture.classList.remove("open");
@@ -153,6 +156,7 @@ optionDestination.forEach(elem =>{
         chooseDestination.innerHTML = elem.querySelector(".option__label-destination").innerHTML;
         choiceDestination.classList.remove("show-option");
         chooseDestination.classList.remove("open");
+        body.classList.remove("noscroll");
     })
 })
 
@@ -161,6 +165,7 @@ optionDeparture.forEach(elem =>{
         chooseDeparture.innerHTML = elem.querySelector(".option__label-departure").innerHTML;
         choiceDeparture.classList.remove("show-option");
         chooseDeparture.classList.remove("open");
+        body.classList.remove("noscroll");
     })
 })
 
@@ -171,5 +176,6 @@ optionDate.forEach(elem =>{
         chooseDate.innerHTML = elem.querySelector(".option__label-date").innerHTML + ' ' +  dateTitle.innerHTML;
         choiceDate.classList.remove("show-option");
         chooseDate.classList.remove("open");
+        body.classList.remove("noscroll");
     })
 })
