@@ -1,22 +1,54 @@
 "use strict";
-    const menuChild = document.querySelector(".menu").cloneNode(1),
+
+const menuChild = document.querySelector(".menu").cloneNode(1),
     signInChild = document.querySelector("#sign-in").cloneNode(1),
     searchBtn = document.querySelector("#search"),
     searchField = document.querySelector(".search-field"),
     popup = document.querySelector(".popup"),
     popupContent = document.querySelector(".popup__content"),
     hamburger = document.querySelector(".hamburger"),
-    overlay = document.querySelector("#overlay"),
     body = document.querySelector("body");
 
-hamburger.addEventListener("click", showPopUp);
-searchBtn.addEventListener("click", showSearchBar);
+hamburger.addEventListener("click", () =>{
+    if(searchField.classList.contains("show")){
+        searchField.classList.remove("show");
+        body.classList.remove("noscroll-default");
+        searchBtn.classList.remove("transform-search");
+    } else if(choiceDestination.classList.contains("show-option") || choiceDeparture.classList.contains("show-option") || choiceDate.classList.contains("show-option")){
+        choiceDestination.classList.remove("show-option");
+        choiceDeparture.classList.remove("show-option");
+        choiceDate.classList.remove("show-option");
+        chooseDestination.classList.remove("open");
+        chooseDeparture.classList.remove("open");
+        chooseDate.classList.remove("open");
+        body.classList.remove("noscroll");
+    }
+    hamburger.classList.toggle("active");
+    body.classList.toggle("noscroll");
+    popup.classList.toggle("show");
+    popupAddContent();
+}); 
 
-function hideOverlay(e){
-    e.preventDefault();
-    overlay.classList.remove("show");
-    body.classList.remove("noscroll");
-}
+// SEARCH BAR
+
+searchBtn.addEventListener("click", () =>{
+    if(popup.classList.contains("show")){
+        popup.classList.remove("show");
+        body.classList.remove("noscroll");
+        hamburger.classList.remove("active");
+    } else if(choiceDestination.classList.contains("show-option") || choiceDeparture.classList.contains("show-option") || choiceDate.classList.contains("show-option")){
+        choiceDestination.classList.remove("show-option");
+        choiceDeparture.classList.remove("show-option");
+        choiceDate.classList.remove("show-option");
+        chooseDestination.classList.remove("open");
+        chooseDeparture.classList.remove("open");
+        chooseDate.classList.remove("open");
+        body.classList.remove("noscroll");
+    }
+    searchField.classList.toggle("show");
+    searchBtn.classList.toggle("transform-search");
+    body.classList.toggle("noscroll-default"); 
+});
 
 // SLIDER
 
@@ -67,19 +99,6 @@ let counter = 0;
     }
 // FUNCTIONS
 
-function showPopUp(e){
-    e.preventDefault(e);
-    if(searchField.classList.contains("show")){
-        searchField.classList.remove("show");
-        body.classList.remove("noscroll");
-        searchBtn.classList.remove("transform-search");
-    }
-    hamburger.classList.toggle("active");
-    popup.classList.toggle("show");
-    body.classList.toggle("noscroll");
-    popupAddContent();
-}
-
 function popupAddContent(){
     popupContent.appendChild(menuChild);
     popupContent.appendChild(signInChild);
@@ -90,20 +109,7 @@ function signInStyle(){
     const signInPopup = document.querySelector(".popup #sign-in");
     signInPopup.classList.add("button_orange");
 }
-
-function showSearchBar(e){
-    e.preventDefault(e);
-    if(popup.classList.contains("show")){
-        popup.classList.remove("show");
-        body.classList.remove("noscroll");
-        hamburger.classList.remove("active");
-    }
-    searchField.classList.toggle("show");
-    searchBtn.classList.toggle("transform-search");
-    body.classList.toggle("noscroll-default"); 
-}
-
-//CRUISE FORM
+// CRUISE FORM
 
 const choiceDeparture = document.querySelector("#choice-departure"),
     choiceDestination = document.querySelector("#choice-destination"),
@@ -124,6 +130,7 @@ chooseDeparture.addEventListener('click', () => {
         chooseDestination.classList.remove("open");
         choiceDate.classList.remove("show-option");
         chooseDate.classList.remove("open");
+        body.classList.remove("noscroll");
     }
 })
 
@@ -136,6 +143,7 @@ chooseDestination.addEventListener('click', () => {
         chooseDeparture.classList.remove("open");
         choiceDate.classList.remove("show-option");
         chooseDate.classList.remove("open");
+        body.classList.remove("noscroll");
     }
 })
 
@@ -148,6 +156,7 @@ chooseDate.addEventListener('click', () => {
         chooseDeparture.classList.remove("open");
         choiceDestination.classList.remove("show-option");
         chooseDestination.classList.remove("open");
+        body.classList.remove("noscroll");
     }
 })
 
