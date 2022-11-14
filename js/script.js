@@ -188,3 +188,12 @@ optionDate.forEach(elem =>{
         body.classList.remove("noscroll");
     })
 })
+
+const choice = document.querySelectorAll(".choice"),
+    choose = document.querySelectorAll(".choose");
+
+choose.forEach(elem =>{
+    elem.addEventListener('click', () =>{
+        console.log('Done');
+    })
+})
