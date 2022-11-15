@@ -121,7 +121,7 @@ const choiceDeparture = document.querySelector("#choice-departure"),
     optionDeparture = document.querySelectorAll(".option__departure"),
     optionDestination = document.querySelectorAll(".option__destination");
 
-chooseDeparture.addEventListener('click', () => {
+chooseDeparture.addEventListener('click', () =>{
     choiceDeparture.classList.toggle("show-option");
     chooseDeparture.classList.toggle("open");
     body.classList.toggle("noscroll");
@@ -132,9 +132,15 @@ chooseDeparture.addEventListener('click', () => {
         chooseDate.classList.remove("open");
         body.classList.remove("noscroll");
     }
-})
-
-chooseDestination.addEventListener('click', () => {
+    document.addEventListener('click', (e) =>{
+        if(choiceDeparture.classList.contains("show-option") & !chooseDeparture.contains(e.target)){
+            chooseDeparture.classList.remove("open");
+            choiceDeparture.classList.remove("show-option");
+            body.classList.toggle("noscroll");
+        }
+    })
+});
+chooseDestination.addEventListener('click', () =>{
     choiceDestination.classList.toggle("show-option");
     chooseDestination.classList.toggle("open");
     body.classList.toggle("noscroll");
@@ -145,7 +151,14 @@ chooseDestination.addEventListener('click', () => {
         chooseDate.classList.remove("open");
         body.classList.remove("noscroll");
     }
-})
+    document.addEventListener('click', (e) =>{
+        if(choiceDestination.classList.contains("show-option") & !chooseDestination.contains(e.target)){
+            chooseDestination.classList.remove("open");
+            choiceDestination.classList.remove("show-option");
+            body.classList.toggle("noscroll");
+        }
+    })
+});
 
 chooseDate.addEventListener('click', () => {
     choiceDate.classList.toggle("show-option");
@@ -158,6 +171,13 @@ chooseDate.addEventListener('click', () => {
         chooseDestination.classList.remove("open");
         body.classList.remove("noscroll");
     }
+    document.addEventListener('click', (e) =>{
+        if(choiceDate.classList.contains("show-option") & !chooseDate.contains(e.target)){
+            chooseDate.classList.remove("open");
+            choiceDate.classList.remove("show-option");
+            body.classList.toggle("noscroll");
+        }
+    })
 })
 
 optionDestination.forEach(elem =>{
@@ -186,14 +206,5 @@ optionDate.forEach(elem =>{
         choiceDate.classList.remove("show-option");
         chooseDate.classList.remove("open");
         body.classList.remove("noscroll");
-    })
-})
-
-const choice = document.querySelectorAll(".choice"),
-    choose = document.querySelectorAll(".choose");
-
-choose.forEach(elem =>{
-    elem.addEventListener('click', () =>{
-        console.log('Done');
     })
 })
