@@ -11,30 +11,29 @@
     &__item
         width: 33%
         padding: 10px
-    &__choose
+    .choose
         position: relative
+        padding: 0 13% 0 0
         margin: 0 0 8px 0
-        border-radius: 10px
-        font-size: 18px
         cursor: pointer
         transition: .3s all
         &:hover, &:active
             color: #656565
-        &::after
-            content: ''
-            display: block
-            position: absolute
-            top: 33%
-            right: 25%
-            width: 6px
-            height: 11px
-            transform: rotate(90deg)
-            transition: .3s all
-            background: url("../img/cruise/arrow.svg") center center/cover no-repeat
-    &__choose-country
-        &::after
-            content: ''
-            right: -100px
+        &__text
+            font-size: 18px
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                top: 42%
+                right: 10%
+                width: 6px
+                height: 11px
+                transform: rotate(90deg)
+                transition: .3s all
+                background: url("../img/cruise/arrow.svg") center center/cover no-repeat
+    .form__choose-country
+        padding: 10px 13%
     .open
         &::after
             content: ''
@@ -52,7 +51,8 @@
         flex-direction: column
         height: auto
         border-radius: 10px
-        background: #fff2ed
+        background: #131249
+        color: #fff
         transition: .3s all
         overflow: auto
         z-index: 99
@@ -74,13 +74,7 @@
             padding: 10px
             cursor: pointer
         &:hover, &:active
-            background: #ffb798
-            color: #656565
-    .option__country
-        color: #fff
-        &:hover, &:active
             background: #000
-            color: #fff
     .date
         display: none
         position: absolute
@@ -103,10 +97,3 @@
             text-align: center
     .show-option
             display: flex
-@media screen and ( max-width: 576px )
-.form
-    &__choose-country
-        &::after
-            content: ''
-            right: -50px    
-    

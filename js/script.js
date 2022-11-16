@@ -116,6 +116,9 @@ const choiceDeparture = document.querySelector("#choice-departure"),
     chooseDeparture = document.querySelector("#choose-departure"),
     chooseDestination = document.querySelector("#choose-destination"),
     chooseDate = document.querySelector("#choose-date"),
+    chooseTextDate = document.querySelector(".choose__text-date"),
+    chooseTextDestination = document.querySelector(".choose__text-destination"),
+    chooseTextDeparture = document.querySelector(".choose__text-departure"),
     choiceDate = document.querySelector("#choice-date"),
     optionDate = document.querySelectorAll(".date__option"),
     optionDeparture = document.querySelectorAll(".option__departure"),
@@ -123,18 +126,18 @@ const choiceDeparture = document.querySelector("#choice-departure"),
 
 chooseDeparture.addEventListener('click', () =>{
     choiceDeparture.classList.toggle("show-option");
-    chooseDeparture.classList.toggle("open");
+    chooseTextDeparture.classList.toggle("open");
     body.classList.toggle("noscroll");
-    if((choiceDestination.classList.contains("show-option") || chooseDestination.classList.contains("open")) || (choiceDate.classList.contains("show-option") || chooseDate.classList.contains("open"))){
+    if((choiceDestination.classList.contains("show-option") || chooseTextDestination.classList.contains("open")) || (choiceDate.classList.contains("show-option") || chooseTextDate.classList.contains("open"))){
         choiceDestination.classList.remove("show-option");
-        chooseDestination.classList.remove("open");
+        chooseTextDestination.classList.remove("open");
         choiceDate.classList.remove("show-option");
         chooseDate.classList.remove("open");
         body.classList.remove("noscroll");
     }
     document.addEventListener('click', (e) =>{
         if(choiceDeparture.classList.contains("show-option") & !chooseDeparture.contains(e.target)){
-            chooseDeparture.classList.remove("open");
+            chooseTextDeparture.classList.remove("open");
             choiceDeparture.classList.remove("show-option");
             body.classList.toggle("noscroll");
         }
@@ -142,18 +145,18 @@ chooseDeparture.addEventListener('click', () =>{
 });
 chooseDestination.addEventListener('click', () =>{
     choiceDestination.classList.toggle("show-option");
-    chooseDestination.classList.toggle("open");
+    chooseTextDestination.classList.toggle("open");
     body.classList.toggle("noscroll");
-    if((choiceDeparture.classList.contains("show-option") || chooseDeparture.classList.contains("open")) || (choiceDate.classList.contains("show-option") || chooseDate.classList.contains("open"))){
+    if((choiceDeparture.classList.contains("show-option") || chooseTextDeparture.classList.contains("open")) || (choiceDate.classList.contains("show-option") || chooseTextDate.classList.contains("open"))){
         choiceDeparture.classList.remove("show-option");
-        chooseDeparture.classList.remove("open");
+        chooseTextDeparture.classList.remove("open");
         choiceDate.classList.remove("show-option");
         chooseDate.classList.remove("open");
         body.classList.remove("noscroll");
     }
     document.addEventListener('click', (e) =>{
         if(choiceDestination.classList.contains("show-option") & !chooseDestination.contains(e.target)){
-            chooseDestination.classList.remove("open");
+            chooseTextDestination.classList.remove("open");
             choiceDestination.classList.remove("show-option");
             body.classList.toggle("noscroll");
         }
@@ -162,18 +165,18 @@ chooseDestination.addEventListener('click', () =>{
 
 chooseDate.addEventListener('click', () => {
     choiceDate.classList.toggle("show-option");
-    chooseDate.classList.toggle("open");
+    chooseTextDate.classList.toggle("open");
     body.classList.toggle("noscroll");
-    if((choiceDeparture.classList.contains("show-option") || chooseDeparture.classList.contains("open")) || (choiceDestination.classList.contains("show-option") || chooseDestination.classList.contains("open")) ){
+    if((choiceDeparture.classList.contains("show-option") || chooseTextDeparture.classList.contains("open")) || (choiceDestination.classList.contains("show-option") || chooseTextDestination.classList.contains("open")) ){
         choiceDeparture.classList.remove("show-option");
-        chooseDeparture.classList.remove("open");
+        chooseTextDeparture.classList.remove("open");
         choiceDestination.classList.remove("show-option");
-        chooseDestination.classList.remove("open");
+        chooseTextDestination.classList.remove("open");
         body.classList.remove("noscroll");
     }
     document.addEventListener('click', (e) =>{
         if(choiceDate.classList.contains("show-option") & !chooseDate.contains(e.target)){
-            chooseDate.classList.remove("open");
+            chooseTextDate.classList.remove("open");
             choiceDate.classList.remove("show-option");
             body.classList.toggle("noscroll");
         }
@@ -182,18 +185,18 @@ chooseDate.addEventListener('click', () => {
 
 optionDestination.forEach(elem =>{
     elem.addEventListener('click', () =>{
-        chooseDestination.innerHTML = elem.querySelector(".option__label-destination").innerHTML;
+        chooseTextDestination.innerHTML = elem.querySelector(".option__label-destination").innerHTML;
         choiceDestination.classList.remove("show-option");
-        chooseDestination.classList.remove("open");
+        chooseTextDestination.classList.remove("open");
         body.classList.remove("noscroll");
     })
 })
 
 optionDeparture.forEach(elem =>{
     elem.addEventListener('click', () =>{
-        chooseDeparture.innerHTML = elem.querySelector(".option__label-departure").innerHTML;
+        chooseTextDeparture.innerHTML = elem.querySelector(".option__label-departure").innerHTML;
         choiceDeparture.classList.remove("show-option");
-        chooseDeparture.classList.remove("open");
+        chooseTextDeparture.classList.remove("open");
         body.classList.remove("noscroll");
     })
 })
@@ -202,9 +205,9 @@ optionDate.forEach(elem =>{
     elem.addEventListener('click', () =>{
         const dateColumn = elem.closest(".date__column");
         const dateTitle = dateColumn.querySelector(".date__title");
-        chooseDate.innerHTML = elem.querySelector(".option__label-date").innerHTML + ' ' +  dateTitle.innerHTML;
+        chooseTextDate.innerHTML = elem.querySelector(".option__label-date").innerHTML + ' ' +  dateTitle.innerHTML;
         choiceDate.classList.remove("show-option");
-        chooseDate.classList.remove("open");
+        chooseTextDate.classList.remove("open");
         body.classList.remove("noscroll");
     })
 })
